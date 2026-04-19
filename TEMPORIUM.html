@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU TEMPORIUM- NPPNPhotography</title>
+    <link rel="stylesheet" href="stylecat.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Page.html">Home</a></li>
+                <li><a href="Page.html#">Exhibitions</a></li>
+                <li><a href="#">Photo</a></li>
+                <li><a href="#">About ME</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <h1>TU TEMPORIUM</h1>
+            <p>every moment is a memory</p>
+        </div>
+    </header>
+    <main>
+        <div class="gallery-info">
+            <h2>The Expressive Eye brings together artists whose work unites aesthetic strength with conceptual depth.</h2>
+        </div>
+        <section class="image-gallery">
+            <img src="image/TUTEMPORIUM/IMG_1131.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1135.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1279.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1287.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1289.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1333.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1336.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1344.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1360.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1397.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1406.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1415.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1419.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1427.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1499.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1502.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1571.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1578.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1589.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_1601.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3582.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3717.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3734.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3752.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3790.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3794.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3851.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3868.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3971.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_3999.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4090.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4129.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4130.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4151.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4218.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4235.jpg" alt="TU TEMPORIUM" loading="lazy">
+            <img src="image/TUTEMPORIUM/IMG_4238.jpg" alt="TU TEMPORIUM" loading="lazy">
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2026 NPPNPhotography</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+        const images = document.querySelectorAll('.image-gallery img');
+
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
