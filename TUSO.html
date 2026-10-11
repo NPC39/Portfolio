@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUSO FilmFantasy - NPPNPhotography</title>
+    <link rel="stylesheet" href="stylecat.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Photo.html">Photo</a></li>
+                <li><a href="#">About ME</a></li>
+                <li><a href="social.html">SNS</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <h1>TUSO FilmFantasy</h1>
+            <p>every moment is a memory</p>
+        </div>
+    </header>
+    <main>
+        <div class="gallery-info">
+            <h2>Rhythm of the Wind</h2>
+        </div>
+        <section class="image-gallery">
+            <img src="image/FilmFantasy/IMG_1896.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_1981.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_1994.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2025.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2042.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2044.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2057.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2066.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2082.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_2088.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_8240.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_8250.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_8252.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_8273.jpg" alt="FilmFantasy Image" loading="lazy">
+            <img src="image/FilmFantasy/IMG_8300.jpg" alt="FilmFantasy Image" loading="lazy">
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2026 NPPNPhotography</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+        const images = document.querySelectorAll('.image-gallery img');
+
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

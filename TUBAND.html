@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUSC The Otherside Unlock - NPPNPhotography</title>
+    <link rel="stylesheet" href="stylecat.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Photo.html">Photo</a></li>
+                <li><a href="#">About ME</a></li>
+                <li><a href="social.html">SNS</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <h1>TUSC The Otherside Unlock</h1>
+            <p>every moment is a memory</p>
+        </div>
+    </header>
+    <main>
+        <div class="gallery-info">
+            <h2>The Art never decide</h2>
+        </div>
+        <section class="image-gallery">
+            <img src="image/TUBAND/DSC00520.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00521.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00559.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00568.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00574.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00712.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00729.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00758.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00820.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00861.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00919.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00945.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC00978.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01045.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01078.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01236.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01257.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01296.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01315.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01419.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01463.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01499.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01592.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01636.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01673.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01732.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01769.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01803.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01844.jpg" alt="TUBAND Image" loading="lazy">
+            <img src="image/TUBAND/DSC01886.jpg" alt="TUBAND Image" loading="lazy">
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2026 NPPNPhotography</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+        const images = document.querySelectorAll('.image-gallery img');
+
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

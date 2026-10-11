@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valenTU - NPPNPhotography</title>
+    <link rel="stylesheet" href="stylecat.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Photo.html">Photo</a></li>
+                <li><a href="#">About ME</a></li>
+                <li><a href="social.html">SNS</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <h1>valenTU</h1>
+            <p>every moment is a memory</p>
+        </div>
+    </header>
+    <main>
+        <div class="gallery-info">
+            <h2>The Art never die</h2>
+        </div>
+        <section class="image-gallery">
+            <img src="image/valenTU/NPC-207.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-210.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-218.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-228.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-231.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-234.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-235.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-242.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-246.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-257.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-267.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-272.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-280.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-288.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-290.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-306.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-308.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-309.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-311.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-319.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-365.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-384.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-487.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-559.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-598.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-609.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-638.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-655.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-665.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-666.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-667.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-668.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-669.jpg" alt="valenTU Image" loading="lazy">
+            <img src="image/valenTU/NPC-673.jpg" alt="valenTU Image" loading="lazy">
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2026 NPPNPhotography</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+        const images = document.querySelectorAll('.image-gallery img');
+
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
